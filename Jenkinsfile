@@ -23,12 +23,12 @@ parameters {
     }
    
     stage("test"){
-      steps{
         when {
           expression{
             params.executeTests
           }
         }
+      steps{
         script {
         gv.testApp()
         }
